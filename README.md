@@ -1,19 +1,22 @@
 # RedditWiper
-Script to remove user's Reddit post submissions and comments.
+
+A CLI program to delete personal Reddit history with sensible defaults.
 
 ## Installation
 
-This script requires **Python > 3.6** and  **PRAW**.
+This **Python > 3.7** script requires **python-dotenv** and **PRAW**.
 
-Once [Python > 3.6](https://www.python.org/) is installed and [virtual environment activated](https://docs.python.org/3/library/venv.html),
+Once [Python > 3.7](https://www.python.org/) is installed and [virtual environment activated](https://docs.python.org/3/library/venv.html),
 
     pip install praw
-    
-or
+    pip install python-dotenv
 
-    pip install -r requirements.txt
+The program can also be ran from [Poetry](https://python-poetry.org/)
 
-Edit *reddit_wiper.py* to include the following credentials:
+    poetry install
+    poetry run python reddit_wiper.py
+
+Create and edit _.env_ to include the following credentials:
 
     USERNAME, PASSWORD, CLIENT_ID, CLIENT_SECRET
 
@@ -21,23 +24,19 @@ client_id and client_secret can be obtained by creating an app entry on reddit: 
 
 (When you're there, a script app, and http://localhost:8080 as the redirect uri should suffice.)
 
-
-
-
-##  Running the Script
+## Running the Script
 
 See the usage guide below (python reddit_wiper.py --help). Running the file without any options will go through all of your Reddit comments and submissions and ask you to confirm each deletion.
-
 
     usage: RedditWiper.py [-h] [-n] [-e] [-c NUMBER_OF_COMMENTS | -C] [-s NUMBER_OF_SUBMISSIONS | -S]
     A script to delete your Reddit history.
     optional arguments:
- 
+
     -h, --help
     show this help message and exit
     -n, --noconfirm
     Delete without confirming. Confirmation is on by default.
-    -e, -E, --everything  
+    -e, -E, --everything
     Delete everything. Other deletion options take precedence.
     -c NUMBER_OF_COMMENTS, --comments NUMBER_OF_COMMENTS
     Delete comments. Default is 0.
