@@ -4,6 +4,15 @@ A CLI program to delete personal Reddit history with sensible defaults.
 
 ## Installation
 
+Create and edit _.env_ to include the following credentials:
+
+    USERNAME, PASSWORD, CLIENT_ID, CLIENT_SECRET
+
+client_id and client_secret can be obtained by creating an app entry on reddit: https://www.reddit.com/prefs/apps/
+
+(When you're there, a script app, and http://localhost:8080 as the redirect uri should suffice.)
+
+
 This **Python > 3.7** script requires **python-dotenv** and **PRAW**.
 
 Once [Python > 3.7](https://www.python.org/) is installed and [virtual environment activated](https://docs.python.org/3/library/venv.html),
@@ -16,13 +25,6 @@ The program can also be ran from [Poetry](https://python-poetry.org/)
     poetry install
     poetry run python reddit_wiper.py
 
-Create and edit _.env_ to include the following credentials:
-
-    USERNAME, PASSWORD, CLIENT_ID, CLIENT_SECRET
-
-client_id and client_secret can be obtained by creating an app entry on reddit: https://www.reddit.com/prefs/apps/
-
-(When you're there, a script app, and http://localhost:8080 as the redirect uri should suffice.)
 
 ## Running the Script
 
