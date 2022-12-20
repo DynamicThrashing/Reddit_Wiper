@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "reddit-wiper"
+version = "0.1.0"
+description = "A CLI program to delete personal Reddit history with sensible defaults."
+authors = ["Brad Lee <dynamicthrashing@gmail.com>"]
+readme = "README.md"
+packages = [{include = "reddit_wiper"}]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+praw = "^7.6.1"
+python-dotenv = "^0.21.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
