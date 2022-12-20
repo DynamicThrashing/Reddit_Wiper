@@ -14,9 +14,6 @@ Once [Python > 3.7](https://www.python.org/) is installed and [virtual environme
 The program can also be ran from [Poetry](https://python-poetry.org/)
 
     poetry install
-
-then,
-
     poetry run python reddit_wiper.py
 
 Create and edit _.env_ to include the following credentials:
